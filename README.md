@@ -12,14 +12,6 @@
 
 CALORISCANBOT is a modern Telegram bot built with Python 3.13 that analyzes nutritional information. The bot uses asynchronous programming paradigms and leverages the latest Python features to provide a fast and responsive user experience.
 
-## ✨ Features
-
-- Calorie analysis and tracking
-- Asynchronous request handling
-- State-based conversation flow
-- Authentication and user management
-- Database persistence for user data
-- Custom keyboard interfaces
 
 ## 🛠️ Technologies
 
