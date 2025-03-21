@@ -29,30 +29,6 @@ CALORISCANBOT is a modern Telegram bot built with Python 3.13 that analyzes nutr
 - **asyncio**: Python's built-in asynchronous I/O framework
 - **uv**: Fast Python package installer and resolver
 
-## 🗂️ Project Structure
-
-```
-CALORISCANBOT/
-├── app/                    # Application core
-├── database/               # Database models and connections
-├── handlers/               # Message and callback handlers
-│   ├── auth.py             # Authentication handlers
-│   ├── base.py             # Base handler classes
-│   ├── callbacks.py        # Callback query handlers
-│   ├── calori_analyse.py   # Food analysis functionality 
-│   └── states.py           # State management
-├── middlewares/            # Request middleware components
-│   ├── befor.py            # Pre-processing middleware
-│   └── keyboards.py        # Keyboard generators
-├── .env                    # Environment variables
-├── config.py               # Configuration settings
-├── main.py                 # Application entry point
-├── models.py               # Data models
-├── requests.py             # External API requests
-├── pyproject.toml          # Project dependencies
-├── uv.lock                 # Lock file for dependencies
-└── Dockerfile              # Container configuration
-```
 
 ## 🚀 Installation
 
