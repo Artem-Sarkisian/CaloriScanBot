@@ -19,7 +19,7 @@ COPY pyproject.toml uv.lock ./
 COPY .env ./
 
 # Установка зависимостей через uv
-RUN uv pip install -e .
+RUN uv pip install .
 
 # Копирование кода проекта
 COPY app/ ./app/
