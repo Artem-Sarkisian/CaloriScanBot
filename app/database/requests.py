@@ -1,24 +1,21 @@
-from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
-from sqlalchemy.ext.asyncio import AsyncAttrs, async_sessionmaker, create_async_engine
-from sqlalchemy import BigInteger
+from app.database.models import async_session, init_db
+from app.database.models import User, Energy_values
+from sqlalchemy import select, update
 
-engine = create_async_engine(url="sqlite+aiosqlite:///db.sqlite3")
 
-async_session = async_sessionmaker(engine)
+async def start_user(tg_id: int, first_name: str, last_name: str, username: str):
+    async with async_session() as session:
+        user = await session.scalar(select(User).where(User.tg_id == tg_id))
 
-class Base(AsyncAttrs, DeclarativeBase):
-    pass
+        if not user:
+            user = User(
+                tg_id=tg_id,
+                first_name=first_name,
+                last_name=last_name,
+                username=username,
+            )
+            session.add(user)
+            await session.commit()
+            await session.refresh(user)
 
-class User(Base):
-    __tablename__ = "users"
-    id: Mapped[int] = mapped_column(primary_key=True)
-    tg_id = mapped_column(BigInteger)
-    email = mapped_column()
-    password = mapped_column()
-    phone_number = mapped_column()
-    username = mapped_column()
-    first_name = mapped_column()
-    last_name = mapped_column()
-    date_of_birth = mapped_column()
-
-    
+        return user

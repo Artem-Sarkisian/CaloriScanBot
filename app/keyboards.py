@@ -9,7 +9,7 @@ auth_keyboard = InlineKeyboardMarkup(
     inline_keyboard=[
         [
             InlineKeyboardButton(text="Войти", callback_data="login"),
-            InlineKeyboardButton(text="Зарегистрироваться", callback_data="register")
+            InlineKeyboardButton(text="Зарегистрироваться", callback_data="register"),
         ]
     ]
 )
@@ -33,7 +33,7 @@ calori_analyse_keyboard = InlineKeyboardMarkup(
             InlineKeyboardButton(text="📷 По фото", callback_data="photo"),
             InlineKeyboardButton(text="📄 По описанию", callback_data="description"),
         ],
-        [InlineKeyboardButton(text="📚 Помощь", callback_data="help")]
+        [InlineKeyboardButton(text="📚 Помощь", callback_data="help")],
     ]
 )
 
@@ -48,5 +48,3 @@ photo_type_keyboard = InlineKeyboardMarkup(
         [InlineKeyboardButton(text="◀️ Назад", callback_data="back_to_main_options")],
     ]
 )
-
-

@@ -120,6 +120,7 @@ dependencies = [
     { name = "aiogram" },
     { name = "aiosqlite" },
     { name = "dotenv" },
+    { name = "greenlet" },
     { name = "sqlalchemy" },
 ]
 
@@ -128,6 +129,7 @@ requires-dist = [
     { name = "aiogram", specifier = ">=3.19.0" },
     { name = "aiosqlite", specifier = ">=0.21.0" },
     { name = "dotenv", specifier = ">=0.9.9" },
+    { name = "greenlet", specifier = ">=3.1.1" },
     { name = "sqlalchemy", specifier = ">=2.0.39" },
 ]
 
