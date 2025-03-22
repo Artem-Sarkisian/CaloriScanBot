@@ -1,8 +1,9 @@
-from aiogram.types import Message
-from aiogram.filters import CommandStart, Command
 from aiogram import Router
-import app.keyboards as keyboard
+from aiogram.filters import Command, CommandStart
+from aiogram.types import Message
+
 import app.database.requests as db_requests
+import app.keyboards as keyboard
 
 base_router = Router()
 

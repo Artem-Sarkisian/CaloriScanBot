@@ -1,5 +1,6 @@
 from aiogram import F, Router
 from aiogram.types import Message
+
 import app.keyboards as keyboard
 
 calori_analyse_router = Router()

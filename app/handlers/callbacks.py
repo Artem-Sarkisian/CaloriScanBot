@@ -1,5 +1,6 @@
 from aiogram import F, Router
-from aiogram.types import CallbackQuery, Message, InaccessibleMessage
+from aiogram.types import CallbackQuery, InaccessibleMessage, Message
+
 import app.keyboards as keyboard
 
 collback_router = Router()

@@ -1,10 +1,9 @@
 from aiogram import F, Router
-from aiogram.types import Message
 from aiogram.fsm.context import FSMContext
 from aiogram.types import CallbackQuery, Message
-from app.handlers.states import Login
-import app.keyboards as keyboard
 
+import app.keyboards as keyboard
+from app.handlers.states import Login
 
 auth_router = Router()
 

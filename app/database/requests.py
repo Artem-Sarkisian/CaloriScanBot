@@ -1,6 +1,6 @@
-from app.database.models import async_session, init_db
-from app.database.models import User, Energy_values
-from sqlalchemy import select, update
+from sqlalchemy import select
+
+from app.database.models import User, async_session
 
 
 async def start_user(tg_id: int, first_name: str, last_name: str, username: str):
