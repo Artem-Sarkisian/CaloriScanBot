@@ -3,7 +3,7 @@ import logging
 
 from aiogram import Bot, Dispatcher
 
-from app.database.requests import init_db
+from app.database.models import init_db
 from app.handlers.auth import auth_router
 from app.handlers.base import base_router
 from app.handlers.callbacks import collback_router
